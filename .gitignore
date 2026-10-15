@@ -29,7 +29,5 @@ build_*.js
 bin/
 obj/
 dist/
-dist-light/
 *.exe
 *.pdb
-*.zip

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More Gravity Theme Studio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="panel-container">
+    <!-- Header -->
+    <header class="panel-header">
+      <div class="header-main">
+        <span class="header-icon">🎨</span>
+        <div class="header-text">
+          <h1 class="header-title">Theme Studio</h1>
+          <p class="header-subtitle">Google Antigravity 2.0 Official UI Panel</p>
+        </div>
+      </div>
+      <div class="status-badge" id="statusBadge">
+        <span class="status-dot"></span>
+        <span class="status-text">Ready</span>
+      </div>
+    </header>
+
+    <!-- Theme Selection Cards -->
+    <section class="section-container">
+      <div class="section-label">STUDIO THEMES</div>
+      <div class="theme-list" id="themeList">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+
+    <!-- Accent Color Selector -->
+    <section class="section-container">
+      <div class="accent-header">
+        <span class="section-label">ACCENT COLOR</span>
+        <span class="accent-name" id="accentName">Signature</span>
+      </div>
+      <div class="accent-row" id="accentRow">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+
+    <!-- Quick Actions Footer -->
+    <footer class="panel-footer">
+      <button class="btn-reset" id="btnReset">Reset Vanilla Antigravity</button>
+      <div class="footer-tip">Shortcut: <code>Ctrl+Alt+T</code> / <code>F8</code></div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

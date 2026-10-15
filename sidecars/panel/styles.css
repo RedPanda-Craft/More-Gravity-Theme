@@ -1,0 +1,275 @@
+/* ============================================================================
+   More Gravity Theme Studio - Sidecar Auxiliary Panel Styles
+   ============================================================================ */
+
+:root {
+  --bg-panel: #141416;
+  --bg-card: #1c1c20;
+  --bg-card-hover: #23232a;
+  --bg-card-active: #272833;
+  --border-subtle: #27272e;
+  --border-active: #38bdf8;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --primary-accent: #fab387;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-panel);
+  color: var(--text-main);
+  font-family: var(--font-stack);
+  font-size: 13px;
+  line-height: 1.5;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+.panel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 14px;
+  min-height: 100vh;
+}
+
+/* Header */
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-icon {
+  font-size: 20px;
+}
+
+.header-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.2px;
+}
+
+.header-subtitle {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: #1c1c24;
+  border: 1px solid #2d2d38;
+  border-radius: 12px;
+  font-size: 10.5px;
+  color: var(--text-muted);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+}
+
+/* Section */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: var(--text-dim);
+}
+
+/* Theme Cards List */
+.theme-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.theme-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.theme-card:hover {
+  background: var(--bg-card-hover);
+  border-color: #3b3b47;
+  transform: translateY(-1px);
+}
+
+.theme-card.active {
+  background: var(--bg-card-active);
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 10px rgba(250, 179, 135, 0.12);
+}
+
+.theme-swatch-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.swatch-pip {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.swatch-pip.accent {
+  opacity: 1;
+  box-shadow: 0 0 4px currentColor;
+}
+
+.theme-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.theme-name {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.theme-desc {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.theme-check {
+  display: none;
+  font-size: 12px;
+  color: var(--primary-accent);
+  font-weight: bold;
+}
+
+.theme-card.active .theme-check {
+  display: block;
+}
+
+/* Accent Selection */
+.accent-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accent-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--primary-accent);
+}
+
+.accent-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #19191e;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+}
+
+.accent-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  position: relative;
+}
+
+.accent-btn:hover {
+  transform: scale(1.15);
+}
+
+.accent-btn.active {
+  border-color: #ffffff;
+  transform: scale(1.18);
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* Footer */
+.panel-footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-reset {
+  width: 100%;
+  padding: 8px 12px;
+  background: #202028;
+  border: 1px solid #31313e;
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: 11.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-reset:hover {
+  background: #2a2a35;
+  color: #ef4444;
+  border-color: #ef4444;
+}
+
+.footer-tip {
+  font-size: 10.5px;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+.footer-tip code {
+  background: #1e1e24;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: #cbd5e1;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "more-gravity-theme-sidecar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Auxiliary Side Pane sidecar for More Gravity Theme Studio."
+}
