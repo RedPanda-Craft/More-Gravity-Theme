@@ -7,7 +7,7 @@
 > An ultra-lightweight, zero-framework, standalone aesthetic theme system and instant palette switcher for **Google Antigravity 2.0**.
 
 <p align="center">
-  <img src="assets/hero-banner.png" alt="More Gravity Theme Hero Banner" width="100%" />
+  <img src="assets/palette.png" alt="More Gravity Studio Themes Palette" width="500" />
 </p>
 
 ---
