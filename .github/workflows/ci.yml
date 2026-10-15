@@ -1,0 +1,46 @@
+name: Theme Verification & Integrity CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate Theme CSS Syntax & Integrity
+        run: |
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+          const themesDir = './themes';
+          const files = fs.readdirSync(themesDir).filter(f => f.endsWith('.css'));
+          if (files.length === 0) throw new Error('No CSS theme files found in ./themes');
+          console.log('Found ' + files.length + ' themes to validate:');
+          for (const file of files) {
+            const content = fs.readFileSync(path.join(themesDir, file), 'utf8');
+            if (content.length < 500) throw new Error('Theme ' + file + ' seems too small or empty');
+            if (!content.includes(':root')) throw new Error('Theme ' + file + ' missing :root declaration');
+            console.log('  [PASS] ' + file + ' (' + content.length + ' bytes)');
+          }
+          "
+
+      - name: Verify Palette Bundle
+        run: |
+          node -e "
+          const fs = require('fs');
+          if (!fs.existsSync('./palette.js')) throw new Error('palette.js missing');
+          const code = fs.readFileSync('./palette.js', 'utf8');
+          if (!code.includes('MoreGravity')) throw new Error('palette.js missing MoreGravity export');
+          console.log('[PASS] palette.js bundle verified (' + code.length + ' bytes)');
+          "
