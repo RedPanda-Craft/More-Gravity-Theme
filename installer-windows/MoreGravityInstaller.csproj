@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>MoreGravity-Installer-Windows-x64</AssemblyName>
+    <RootNamespace>MoreGravityInstaller</RootNamespace>
+    <Version>1.0.0</Version>
+    <Product>More Gravity Theme Installer</Product>
+    <Description>One-click aesthetic theme &amp; palette installer for Google Antigravity 2.0</Description>
+    <Company>RedPanda Craft</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\palette.js" Link="Resources\palette.js" />
+    <EmbeddedResource Include="..\themes\**\*" Link="Resources\themes\%(RecursiveDir)%(FileName)%(Extension)" />
+  </ItemGroup>
+
+</Project>

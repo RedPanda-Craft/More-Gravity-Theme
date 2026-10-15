@@ -24,3 +24,10 @@ snap_*.png
 !assets/*.png
 test_*.py
 build_*.js
+
+# .NET Build artifacts
+bin/
+obj/
+dist/
+*.exe
+*.pdb
