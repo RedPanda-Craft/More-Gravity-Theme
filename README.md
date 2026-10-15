@@ -1,11 +1,14 @@
 # More Gravity Theme 🎨
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![CI](https://github.com/YashjitPal/BetterGravity/actions/workflows/ci.yml/badge.svg)](https://github.com)
 [![Antigravity](https://img.shields.io/badge/Antigravity-2.0-blue.svg)](https://antigravity.google)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)]()
 
 > An ultra-lightweight, zero-framework, standalone aesthetic theme system and instant palette switcher for **Google Antigravity 2.0**.
+
+<p align="center">
+  <img src="assets/hero-banner.png" alt="More Gravity Theme Hero Banner" width="100%" />
+</p>
 
 ---
 

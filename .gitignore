@@ -20,7 +20,7 @@ yarn-error.log*
 *.log
 *.tmp
 *.bak
-*.png
 snap_*.png
+!assets/*.png
 test_*.py
 build_*.js
