@@ -219,3 +219,7 @@ app.api('/api/reset', async () => {
     return { success: false, error: err.message };
   }
 }, 'POST');
+
+app.run();
+console.log('[Theme Studio Sidecar] Started and ready.');
+
